@@ -16,13 +16,13 @@ connectDB();
 app.use(express.json());
 
 app.get('/', function(req, res){
-res.send("Notes api");
+res.send("Welcome to notes api");
 });
 
 
-app.use("/api/notes",noteRoutes);
+app.use("/notes",noteRoutes);
 
 
 const PORT = process.env.PORT || 3000;
 
-app.listen(PORT,console.log("server running"));
+app.listen(PORT,console.log("server running at PORT: "+PORT));
